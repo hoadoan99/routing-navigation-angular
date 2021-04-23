@@ -1,0 +1,9 @@
+<div class="container">
+    <div *ngFor="let follower of followers" class="media mt-4">
+        <img [src]="follower.images" class="mr-3" alt="...">
+        <div class="media-body">
+            <a [routerLink]="['/followers',follower.id, follower.login]">{{follower.login}}</a>
+            <p>{{follower.desc}}</p>
+        </div>
+    </div>
+</div>
